@@ -146,4 +146,132 @@ h1 {
   border-radius: 10px;
   border: none;
 }
+/* =========================
+   SIDEBAR
+========================= */
 
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0d47a1 0%, #1565c0 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  transition: .3s;
+}
+
+.sidebar h3 {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.sidebar a {
+  display: block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,.15);
+}
+
+/* =========================
+   BOTON MENU
+========================= */
+
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 2000;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  background: #0d47a1;
+  color: white;
+  font-size: 22px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+  .sidebar {
+    width: 220px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 1500;
+    padding-top: 70px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .flex-grow-1 {
+    width: 100%;
+    padding: 70px 15px 15px 15px !important;
+  }
+
+  .row > div {
+    margin-bottom: 15px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+}
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 576px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+}
